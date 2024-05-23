@@ -330,7 +330,9 @@ fun AppManageFab(navigator: DestinationsNavigator) {
                 TextButton(
                     content = { Text(stringResource(android.R.string.ok)) },
                     onClick = {
-                        launcher.launch(Intent(Intent.ACTION_OPEN_DOCUMENT_TREE))
+                        val intent = Intent("bin.mt.plus.OPEN_FILE")
+                        intent.setPackage("bin.mt.plus")
+                        launcher.launch(intent)
                         shouldSelectDirectory = false
                     }
                 )
